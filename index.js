@@ -1,4 +1,4 @@
-
+/*
 //PRESENTACION
 alert("Bienvenido a los cosa café, café de especialidad");
 alert("Amamos muchisimo el café, tanto o mas que usted, pero hay que ser sinceros, nada en exeso es bueno...");
@@ -91,8 +91,9 @@ console.log(tipos_cafe);
 
 console.log(tipos_cafe.join("----"));
 console.log(tipos_cafe.indexOf("cortado"));
-
+*/
 //ARRAY QUE ALMACENA OBJETOS
+/*
 const productos = [
     {id: 253, nombre: "cortado" , precio: "400"},
     {id: 124, nombre: "tostado", precio: "850"},
@@ -106,14 +107,14 @@ productos.push({id: 444, nombre: "latte", precio: "500"});
 productos.unshift({id: 985, nombre: "masas_finas", precio: "800"});
 console.log(productos.length);
 console.log(productos);
-
+*/
 
 //METODOS AVANZADOS ARRAYS
-
-let busqueda = productos.find(producto => producto.nombre === "tostado");
+/*
+let busqueda = productos.find(item => item.nombre === "tostado");
 console.log(busqueda);
 
-let busqueda2 = productos.find(producto => producto.precio === "3000");
+let busqueda2 = productos.find(item => item.precio === "3000");
 console.log(busqueda2);
 
 let filtro = productos.filter(item => item.precio > 500);
@@ -122,8 +123,94 @@ console.log(filtro);
 let filtro2 = productos.filter(item => item.precio < 840);
 console.log(filtro2);
 
-let existe = productos.some(producto => producto.nombre === "torta");
+let existe = productos.some(item => item.nombre === "torta");
 console.log(existe);
+
+
+let costo_envio = productos.map(item=>{
+    return{
+        id: item.id,
+        nombre: item.nombre,
+        precio: item.precio + 70
+    }
+});
+
+console.log(costo_envio);
+*/
+
+let div_b = document.getElementById("bienvenida");
+let parrafo = document.createElement("p");
+div_b.className = "bienvenida";
+parrafo.innerHTML = "<h1>FRUTOS ATIMOV ALMACEN NATURAL</h1>";
+div_b.append(parrafo);
+
+let div_disp = document.getElementById("disponibles");
+let prod_disp = document.createElement("p");
+div_disp.className = "disponibles";
+prod_disp.innerHTML = "<h3>Productos disponibles:</h3>";
+div_disp.append(prod_disp);
+
+const productos = [
+    {id: 78, nombre: "avena", peso_gr: 500, precio: 300},
+    {id: 24, nombre: "almendra", peso_gr: 500, precio: 1700},
+    {id: 12, nombre: "semilla", peso_gr: 500, precio: 500},
+
+];
+
+let nuevo_prod = {id: 321, nombre: "nuez", peso_gr: 500, precio: 1200};
+productos.push(nuevo_prod);
+
+
+let contenedor = document.getElementById("contenedor");
+
+for (const producto of productos){
+    let div_contenedor = document.createElement("div");
+    contenedor.className = "productos";
+    div_contenedor.className = "divs_productos";
+    div_contenedor.innerHTML = `<h3>Nombre: ${producto.nombre} </h3>
+                     <h5>id: ${producto.id}</p>
+                     <h6>Peso en gramos: ${producto.peso_gr}</h6>
+                     <h6>Precio: ${producto.precio}</h6>`;
+
+    contenedor.append(div_contenedor);
+}
+
+
+div_comprar = document.getElementById("comprar");
+
+nombre_prod.addEventListener("input", () => {
+    if (nombre_prod.value.includes("avena")){
+        let mensaje = document.createElement("p");
+        mensaje.className = " caracteristicas"; 
+        mensaje.innerHTML= "<h2> Estudios científicos han comprobado que comer cereales de grano entero como la avena, <br />puede tener efectos positivos en la salud. Esto se debe a que es fuente de fibra dietética, <br />proteína, vitaminas y minerales.</h2>";
+        div_comprar.append(mensaje);
+
+    }else if (nombre_prod.value.includes("almendra")){
+        let mensaje = document.createElement("p");
+        mensaje.className = " caracteristicas"; 
+        mensaje.innerHTML= "<h2> Son ricas en fibras, proteínas, vitaminas B y E, grasas saludables, hierro, calcio, fósforo…<br /> Merendar almendras o tomarlas a media mañana puede ayudar a mantener unos niveles saludables de colesterol</h2>";
+        div_comprar.append(mensaje);
+    }
+    else if (nombre_prod.value.includes("semilla")){
+        let mensaje = document.createElement("p");
+        mensaje.className = " caracteristicas"; 
+        mensaje.innerHTML= "<h2>Aporta buena cantidad de vitamina E y vitaminas del complejo B <br />que ayuda al funcionamiento del sistema nervioso central</h2>";
+        div_comprar.append(mensaje);
+    }
+    else if (nombre_prod.value.includes("nuez")){
+        let mensaje = document.createElement("p");
+        mensaje.className = " caracteristicas"; 
+        mensaje.innerHTML= "<h2> Aporta numerosos minerales como potasio, que facilita el desarrollo muscular,<br /> zinc, que interviene en el sistema nervioso, magnesio y fósforo.<br /> Destaca por su contenido en vitaminas del grupo B, como la vitamina B1 o tiamina y la B6 o piridoxina,<br /> que favorecen el buen funcionamiento del cerebro y los músculos.</h2>";
+        div_comprar.append(mensaje);
+    }
+});
+
+
+
+
+
+
+
 
 
 

@@ -1,0 +1,41 @@
+.bienvenida {
+    background-color: rgb(219, 182, 113);
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  .disponibles{
+    text-align: center;
+    padding-top:20px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  .productos {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    
+  }
+
+  .divs_productos{
+    margin: 30px;
+  }
+
+  .caracteristicas{
+    text-align: center;
+    background-color: rgb(224, 206, 172);
+    margin-top: 30px;
+  }
+
+  #comprar{
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  #nombre_prod{
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
