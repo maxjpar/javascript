@@ -1,41 +1,85 @@
-.bienvenida {
-    background-color: rgb(219, 182, 113);
+.bienvenida { 
     text-align: center;
     padding-top: 20px;
     padding-bottom: 20px;
     margin-top: 20px;
-  }
+}
 
-  .disponibles{
+.texto_disponibles{
     text-align: center;
     padding-top:20px;
     padding-bottom: 20px;
     margin-top: 20px;
-  }
+}
 
-  .productos {
-    display: flex;
+.info_nutricional{
+    text-align: center;
+    margin-top: 20%;
+}
+
+.compras{
+  display: flex;
+    text-align: center;
+    margin-top: 30px;
     justify-content: center;
-    text-align: center;
     
-  }
+}
 
-  .divs_productos{
-    margin: 30px;
-  }
-
-  .caracteristicas{
-    text-align: center;
-    background-color: rgb(224, 206, 172);
-    margin-top: 30px;
-  }
-
-  #comprar{
-    text-align: center;
-    margin-top: 30px;
-  }
-
-  #nombre_prod{
+#nombre_prod{
     margin-top: 30px;
     margin-bottom: 30px;
-  }
+}
+
+#nav{
+    background-color: rgb(135, 219, 153);
+}
+
+.divs_productos{
+  border: solid rgb(135, 219, 153);
+  grid-template-columns: 33% 33% 33%;
+  margin: 20px;
+}
+
+.contenedor_productos {
+  display:  grid;
+  grid-template-columns: 33% 33% 33% ;
+  text-align: center; 
+  margin-bottom: 15%;
+}
+
+.modal-container{
+  
+  display: flex;
+  justify-content: center;
+}
+
+.modal_carrito{
+  width: 45%;
+  background-color: rgb(92, 167, 108);
+  text-align: center;
+}
+
+.modal_active{
+  visibility: visible;
+}
+
+.boton_producto{
+  background-color: rgb(135, 219, 153);;
+}
+
+.seccion_carrito{
+  text-align: center;
+
+}
+
+.estilo_modal{
+  margin: 12px;
+}
+
+.precioProducto{
+  margin-top: 3%;
+  color: rgb(10, 34, 6);
+}
+
+
+ 
