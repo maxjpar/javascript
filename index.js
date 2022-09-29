@@ -40,6 +40,13 @@ div_disp.append(prod_disp);
         const boton = document.getElementById(`boton${producto.id}`);
         boton.addEventListener('click', () => {
             agregarAlCarrito(producto.id);
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: `Se ha agregado "${producto.nombre}" correctamente al carrito de compras`,
+                showConfirmButton: false,
+                timer: 2500
+              })
             
         });
        
