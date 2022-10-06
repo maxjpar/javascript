@@ -12,15 +12,13 @@ div_disp.className = "texto_disponibles";
 prod_disp.innerHTML = "<h3>Productos disponibles:</h3>";
 div_disp.append(prod_disp);
 
+const contenedorProductos = document.getElementById("contenedorProductos");
 
+const traerDatos = async () => {
+    const respuesta = await fetch("./data.json");
+    const data = await respuesta.json()
 
-
-//funcion que me muestra el array de productos en pantalla
-
-    const contenedorProductos = document.getElementById("contenedorProductos");
-
-    //recorro el array de productos y lo muestro con el innerhtml
-    stockProductos.forEach(producto => {
+    data.forEach(producto => {
         const div_contenedor = document.createElement("div");
         contenedorProductos.className = "contenedor_productos";
         div_contenedor.className = "divs_productos";
@@ -34,7 +32,6 @@ div_disp.append(prod_disp);
                                             <button class="btn btn-light boton_producto" id= boton${producto.id}>Comprar<i class="fas fa-shopping-cart"></button>
                                         </div>
                                     </div>`;
-
         contenedorProductos.append(div_contenedor);
         
         const boton = document.getElementById(`boton${producto.id}`);
@@ -46,15 +43,13 @@ div_disp.append(prod_disp);
                 title: `Se ha agregado "${producto.nombre}" correctamente al carrito de compras`,
                 showConfirmButton: false,
                 timer: 2500
-              })
-            
+            })
         });
        
-        
     });
+} 
 
-    
-
+traerDatos();  
 
 div_comprar = document.getElementById("formulario_nutricional");
 
