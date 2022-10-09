@@ -25,7 +25,7 @@
                     <a id="texto_nav" class="nav-link text-body active" aria-current="page" href="">INICIO</a>
                   </li>
                   <li class="nav-item">
-                    <a id="texto_nav" class="nav-link text-body" href="">TIENDA</a>
+                    <a id="texto_nav" class="nav-link text-body" href="pages/informacion_nutricional.html">INFO NUTRICIONAL</a>
                   </li>
                   <li class="nav-item">
                     <a id="texto_nav" class="nav-link text-body" href="">ENVIO</a>
@@ -33,14 +33,16 @@
                   <li class="nav-item">
                     <a id="texto_nav" class="nav-link text-body" href="" tabindex="-1" aria-disabled="true">CONTACTANOS</a>
                   </li>
-                  <li class="nav-item">
-                    <button id="abrir_carrito" class="nav-link text-body" href="#"> CARRITO <img src="./multimedia/mbrishoppingcart_99558.ico"> <span id="contador_carrito">0</span>
-                  </li>
+                    <!--<button id="abrir_carrito" class="nav-link text-body" href="#">  <img src="./multimedia/mbrishoppingcart_99558.ico"> <span id="contadorCarrito">0</span>-->
                 </ul>
               </div>
             </div>
           </nav>
-    </header>
+          <div class="div_icono_Carrito">
+
+            <a id="seccion_carrito" class="texto_carrito" href="#titulo_seccion"><img src="./multimedia/mbrishoppingcart_99558.ico"> <span id="contadorCarrito">0</span></a>
+          </div>
+          </header>
     
     <div id="bienvenida"> </div>
 
@@ -49,25 +51,24 @@
     <!-- contiene las cards con el stock de los productos-->
     <div id="contenedorProductos"> </div>
 
-    <div class="modal-container">
+    <div class="modal_contenedor">
       <div class="modal_carrito"> 
-        <h2 class="seccion_carrito">SECCIÓN CARRITO DE COMPRAS</h2>
-        <div id="contenedorCarrito"> 
-        </div>
-        <div class="totalAPagar">
-          <h6 class="precioProducto">Total a pagar:</h6>
-        </div>
-      </div>
-    </div> 
-
-    <div id="formulario_nutricional" class="info_nutricional">
-      <h2>Ingrese el nombre de alguno de los 4 productos disponibles, y le daremos su informacion </h2>
-      <input type="text" id="nombre_prod">
+        <h2 id="titulo_seccion"class="titulo_carrito">SECCIÓN CARRITO DE COMPRAS</h2><!-- -->
+        
+        <div id="contenedorCarrito"> </div>
+        <p class="precioProducto"> <!--si -->
+          Precio total de la compra: $<span id="precioTotal">0</span>
+        </p>
+      
+      <button id="boton_vaciar" class="boton_vaciar">
+        Vaciar carrito
+      </button>
     </div>
-    
-    
+    </div> 
+  
 <script src="js/productos.js"></script>
 <script src="js/carrito.js"></script>
+<script src="js/modal.js"></script>
     <script src="js/index.js"></script>
 </body>
 </html>

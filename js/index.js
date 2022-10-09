@@ -12,11 +12,15 @@ div_disp.className = "texto_disponibles";
 prod_disp.innerHTML = "<h3>Productos disponibles:</h3>";
 div_disp.append(prod_disp);
 
+
+
 const contenedorProductos = document.getElementById("contenedorProductos");
 
+
+let data;
 const traerDatos = async () => {
     const respuesta = await fetch("./data.json");
-    const data = await respuesta.json()
+     data = await respuesta.json()
 
     data.forEach(producto => {
         const div_contenedor = document.createElement("div");
@@ -42,14 +46,16 @@ const traerDatos = async () => {
                 icon: 'success',
                 title: `Se ha agregado "${producto.nombre}" correctamente al carrito de compras`,
                 showConfirmButton: false,
-                timer: 2500
+                timer: 1500
             })
         });
-       
+        
     });
 } 
 
 traerDatos();  
+
+
 
 div_comprar = document.getElementById("formulario_nutricional");
 
