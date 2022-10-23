@@ -69,5 +69,30 @@
         "cantidad": 1,
         "precio": 320,
         "img": "./multimedia/te.png"
+    },
+    {
+        "id": 877,
+        "nombre": "Miel",
+        "peso_gr": 500,
+        "cantidad": 1,
+        "precio": 560,
+        "img": "./multimedia/miel.png"
+    },
+    {
+        "id": 44,
+        "nombre": "Stevia",
+        "peso_gr": 200,
+        "cantidad": 1,
+        "precio": 390,
+        "img": "./multimedia/stevia.png"
+    },
+    {
+        "id": 10,
+        "nombre": "Dulce de leche",
+        "peso_gr": 500,
+        "cantidad": 1,
+        "precio": 720,
+        "img": "./multimedia/dulce_de_leche.png"
     }
+
     ]
